@@ -27,3 +27,17 @@ Id=9 | Name=J | Category=Box | Origin=(60,60,0) | Size=(8x8x8)
   - [NonPositiveDimension] (Width): La dimensión Width debe ser mayor que cero (valor actual: -2).
   - [MissingCategory] (Category): La categoría no puede estar vacía.
   - [DuplicateId] (Id): El Id 4 está duplicado en el lote.
+
+--- Análisis espacial (§7.3) ---
+Intersecciones detectadas: 4
+Contenciones detectadas: 2
+
+Pares en intersección:
+A (Id=1) ∩ B (Id=2)
+A (Id=1) ∩ C (Id=3)
+F (Id=5) ∩ G (Id=6)
+H (Id=7) ∩ I (Id=8)
+
+Pares en contención (inner ⊂ outer):
+B (Id=2) ⊂ A (Id=1)
+G (Id=6) ⊂ F (Id=5)

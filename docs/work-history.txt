@@ -36,6 +36,15 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Trello / Notion: actualizados
 - Git: 2e36eb2 feat: add object validation pipeline (Fase 2) → push main
 
+2026-06-06 — Fase 3: Motor geométrico (§7.3)
+- AabbGeometry: Intersects + Contains (intervalos cerrados AABB)
+- SpatialAnalyzer — O(n²) sobre objetos válidos
+- SpatialAnalysisResult: ObjectPair, ContainmentPair
+- Salida: 4 intersecciones (A∩B, A∩C, F∩G, H∩I) · 2 contenciones (B⊂A, G⊂F)
+- Verificación: dotnet build 0 errores · criterios B⊂A, G⊂F, C∩A OK
+- Trello / Notion: actualizados
+- Git: (commit Fase 3) → push main
+
 --------------------------------------------------------------------------------
 
-Próximo: Fase 3 — Motor geométrico (§7.3)
+Próximo: Fase 4 — Aislados y resumen (§7.5)

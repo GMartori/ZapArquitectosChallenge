@@ -1,5 +1,6 @@
 ﻿using SpatialAnalysis.Console;
 using SpatialAnalysis.Console.Reporting;
+using SpatialAnalysis.Core.Analysis;
 using SpatialAnalysis.Core.Parsing;
 using SpatialAnalysis.Core.Validation;
 
@@ -12,7 +13,10 @@ try
     var validator = new SpatialObjectValidator();
     var batch = validator.ValidateBatch(dtos);
 
-    ValidationReportWriter.Write(Console.Out, dataPath, batch);
+    var analyzer = new SpatialAnalyzer();
+    var spatialResult = analyzer.Analyze(batch.ValidObjects);
+
+    ValidationReportWriter.Write(Console.Out, dataPath, batch, spatialResult);
     return 0;
 }
 catch (Exception ex)

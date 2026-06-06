@@ -37,10 +37,15 @@ ZapArquitectosChallenge/
     │   │       ├── PositiveDimensionsRule.cs
     │   │       └── CategoryRule.cs
     │   ├── Geometry/
+    │   │   └── AabbGeometry.cs
     │   └── Analysis/
+    │       ├── SpatialAnalyzer.cs
     │       └── Models/
     │           ├── ProcessingBatch.cs
-    │           └── InvalidRecord.cs
+    │           ├── InvalidRecord.cs
+    │           ├── SpatialAnalysisResult.cs
+    │           ├── ObjectPair.cs
+    │           └── ContainmentPair.cs
     └── SpatialAnalysis.Console/
         ├── Program.cs
         ├── CompositionRoot.cs
