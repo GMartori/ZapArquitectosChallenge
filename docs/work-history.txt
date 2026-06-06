@@ -105,7 +105,7 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 2026-06-06 — AI_USAGE.md: Conclusiones finales (SDD vs vibe coding)
 - Sección aprobada por usuario; SDD, Notion, Trello, MCPs, Skills
 - Verificación: dotnet build 0 errores
-- Git: (pendiente commit) → push main
+- Git: 700df72 docs: add final conclusions on SDD and vibe coding to AI_USAGE → push main
 
 --------------------------------------------------------------------------------
 
