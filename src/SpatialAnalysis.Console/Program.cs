@@ -1,9 +1,18 @@
 ﻿using SpatialAnalysis.Console;
+using SpatialAnalysis.Console.Reporting;
+using SpatialAnalysis.Core.Parsing;
 
-var dataPath = CompositionRoot.ResolveDataFilePath(args);
+try
+{
+    var dataPath = CompositionRoot.ResolveDataFilePath(args);
+    var reader = new SpatialObjectJsonReader();
+    var objects = reader.ReadFromFile(dataPath);
 
-Console.WriteLine("Spatial Analysis — ZAP Arquitectos Challenge");
-Console.WriteLine($"Data file: {dataPath}");
-Console.WriteLine(File.Exists(dataPath)
-    ? "Bootstrap OK. Fase 0 completada."
-    : "Bootstrap OK, pero no se encontró el archivo de datos (revisar copia a output).");
+    ObjectListingWriter.WriteSummary(Console.Out, dataPath, objects);
+    return 0;
+}
+catch (Exception ex)
+{
+    Console.Error.WriteLine($"Error: {ex.Message}");
+    return 1;
+}

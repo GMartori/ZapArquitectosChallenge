@@ -1,4 +1,17 @@
 Spatial Analysis — ZAP Arquitectos Challenge
-Bootstrap OK. Fase 0 completada.
+Archivo: ...\data\objects.json
+Total objetos leídos: 12
 
-(Se actualizará con la salida real del análisis en Fase 5.)
+--- Objetos (datos crudos) ---
+Id=1 | Name=A | Category="Box" | Origin=(0,0,0) | Size=(10x10x10)
+Id=2 | Name=B | Category="Box" | Origin=(2,2,2) | Size=(4x4x4)
+Id=3 | Name=C | Category="Box" | Origin=(8,8,8) | Size=(6x6x6)
+Id=4 | Name=D | Category="Box" | Origin=(30,30,30) | Size=(5x5x5)
+Id=5 | Name=F | Category="Container" | Origin=(15,0,0) | Size=(12x12x12)
+Id=6 | Name=G | Category="Container" | Origin=(18,2,2) | Size=(3x3x3)
+Id=7 | Name=H | Category="Box" | Origin=(40,0,0) | Size=(7x7x7)
+Id=8 | Name=I | Category="Box" | Origin=(44,4,4) | Size=(5x5x5)
+Id=9 | Name=J | Category="Box" | Origin=(60,60,0) | Size=(8x8x8)
+Id=10 | Name=K | Category="Void" | Origin=(70,10,10) | Size=(0x4x4)
+Id=11 | Name=L | Category=null | Origin=(5,20,5) | Size=(3x3x3)
+Id=4 | Name=E | Category="" | Origin=(0,0,0) | Size=(-2x3x3)

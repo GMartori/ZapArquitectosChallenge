@@ -23,8 +23,18 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Verificación: dotnet build OK · dotnet run encuentra data/objects.json
 - Trello: Fase 0 → Hecho (checklist 4/4)
 - Notion: roadmap y arquitectura actualizados
-- Git: commit inicial Fase 0 → push main
+- Git: b5e9f92 feat: bootstrap solution (Fase 0) → push main
+
+2026-06-06 — Fase 1: Parsing y DTOs (§7.1)
+- SpatialObjectDto — reflejo 1:1 del JSON (Category nullable)
+- SpatialObjectJsonReader — System.Text.Json, lectura archivo/JSON
+- ObjectListingWriter — listado consola + total leídos
+- Program.cs orquesta lectura y salida; sin validación aún (Fase 2)
+- Verificación: dotnet build 0 errores · 12 objetos listados (incl. K, L, E crudos)
+- Trello: Fase 1 → Hecho
+- Notion: roadmap actualizado
+- Git: commit Fase 1 → push main
 
 --------------------------------------------------------------------------------
 
-Próximo: Fase 1 — Parsing y DTOs
+Próximo: Fase 2 — Validación (§7.2)

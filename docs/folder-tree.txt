@@ -13,6 +13,10 @@ ZapArquitectosChallenge/
 │   └── sample-output.txt
 └── src/
     ├── SpatialAnalysis.Core/
+    │   ├── Input/
+    │   │   └── SpatialObjectDto.cs
+    │   ├── Parsing/
+    │   │   └── SpatialObjectJsonReader.cs
     │   ├── Domain/
     │   │   ├── ValueObjects/
     │   │   └── Entities/
@@ -25,3 +29,4 @@ ZapArquitectosChallenge/
         ├── Program.cs
         ├── CompositionRoot.cs
         └── Reporting/
+            └── ObjectListingWriter.cs

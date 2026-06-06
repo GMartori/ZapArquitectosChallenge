@@ -2,7 +2,6 @@ namespace SpatialAnalysis.Console;
 
 /// <summary>
 /// Punto de composición manual (sin contenedor DI).
-/// Se completará en fases posteriores.
 /// </summary>
 internal static class CompositionRoot
 {
