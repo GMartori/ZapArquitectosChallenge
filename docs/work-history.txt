@@ -85,4 +85,11 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 
 --------------------------------------------------------------------------------
 
+2026-06-06 — Fase 7 (ampliación PROCESS): metodología y herramientas
+- PROCESS.md: sección SDD, MCPs (Notion, Trello, GitHub, Google Workspace, Tavily) y Skills
+- Verificación: dotnet build 0 errores
+- Git: (pendiente commit) → push main
+
+--------------------------------------------------------------------------------
+
 Próximo: Fase 7 — Entrega (Drive + mail a lbecher@zaparquitectos.com)

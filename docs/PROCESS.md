@@ -12,6 +12,61 @@ La consigna pide una herramienta en C# que procese **prismas rectangulares 3D al
 
 Cada objeto se modela con origen `(X, Y, Z)` = esquina mínima y dimensiones `(Width, Height, Depth)`. No hay rotación: los ejes del prisma coinciden con los ejes del sistema de coordenadas.
 
+## Metodología y herramientas de trabajo
+
+Además del stack .NET, el desarrollo se apoyó en una metodología orientada a especificación, integraciones MCP y skills de buenas prácticas en Cursor.
+
+### Spec-Driven Development (SDD)
+
+**Spec-Driven Development** — desarrollo guiado por la especificación — fue el marco principal del proyecto:
+
+1. **Especificación fuente:** [documento de consigna](https://docs.google.com/document/d/1ReZhomQqdr2NzBu3TZ_QtVFFSzEJaCiU/edit) (§7.1–§7.6) como contrato antes de escribir código.
+2. **Sesión 0 — diseño sin código:** análisis de arquitectura, supuestos y roadmap alineados a la consigna.
+3. **Fases numeradas:** cada entregable del documento (parsing, validación, geometría, reporte, casos adicionales) mapeado a una fase con criterio de cierre explícito.
+4. **Verificación continua:** al cerrar cada fase, comparar salida real (`dotnet run`, `sample-output.txt`, `TEST_CASES.md`) contra lo esperado en la spec.
+5. **Auditoría de alineación:** repaso formal de §7.1–§7.5 antes de Fase 6 para evitar desviaciones sobre lo esencial.
+6. **Deuda documental trazada:** ítems fuera de la spec técnica inmediata (`PROCESS.md`, `AI_USAGE.md`) registrados y cerrados en Fase 7.
+
+El SDD permitió priorizar lo obligatorio (validación, intersección, contención, aislados, reporte) y postergar mejoras opcionales (tests auto, DI elaborado, indexación espacial).
+
+### MCPs (Model Context Protocol)
+
+Integraciones MCP en Cursor para orquestar el flujo fuera del IDE:
+
+| MCP | Uso en este proyecto |
+|---|---|
+| **Notion** | Hub del challenge: arquitectura, modelo de datos, algoritmo AABB, roadmap, prompts IA, entregables |
+| **Trello** | Kanban por fase (Por hacer / En progreso / Hecho) con checklist de entrega |
+| **GitHub** | Repo `GMartori/ZapArquitectosChallenge` — commit y push al cerrar cada fase |
+| **Google Workspace** | Acceso y referencia al documento de consigna (Google Doc) |
+| **Tavily** | Búsqueda web puntual para contexto de la prueba y enlaces externos cuando hizo falta |
+
+Otros MCPs disponibles en el entorno (Railway, Supabase, Playwright, etc.) no formaron parte del alcance de esta prueba take-home.
+
+**Ritual de cierre por fase (SDD + MCPs):**
+
+```
+Spec (§7.x) → Implementar → dotnet build/run → work-history.txt
+    → git commit + push (GitHub) → Trello (Hecho) → Notion (roadmap)
+```
+
+### Skills y buenas prácticas
+
+Skills de Cursor y reglas de trabajo que guiaron decisiones de código y arquitectura:
+
+| Skill / práctica | Aplicación |
+|---|---|
+| **Análisis antes de código** | Primera sesión solo diseño; sin scaffolding hasta acordar pipeline y supuestos |
+| **KISS y alcance mínimo** | O(n²), sin octree, sin DI container, sin capa de persistencia en la entrega |
+| **Separación de responsabilidades** | Core reutilizable vs Console; validación separada de geometría |
+| **Convenciones del repo** | Nombres, carpetas y estilo alineados fase a fase; cambios focalizados por commit |
+| **caveman-policy** | Comunicación comprimida en sesiones de código; documentación (Notion, PROCESS, PRs) en prosa completa |
+| **caveman-commit** | Mensajes de commit concisos en Conventional Commits, con el “por qué” cuando aporta |
+| **Validación manual explícita** | Dataset base + casos adicionales + `sample-output.txt` en lugar de tests automatizados por límite de tiempo |
+| **Documentar supuestos** | IDs duplicados, bordes cerrados, campos JSON ausentes — decisiones explícitas en README y PROCESS |
+
+Principio rector: la IA acelera scaffolding y documentación; las decisiones de arquitectura y los criterios geométricos se validaron manualmente contra la especificación y la salida de consola.
+
 ## Estructura de la solución
 
 Arquitectura **Core + Console** para separar lógica de negocio de la capa de presentación (consola hoy, WPF en el futuro).
