@@ -18,7 +18,7 @@ Opcional: indicar ruta al JSON:
 dotnet run --project src/SpatialAnalysis.Console -- data/objects.json
 ```
 
-La aplicación lee `data/objects.json` (copiado al output en build) y lista los objetos parseados. La validación se aplica en fases posteriores.
+La aplicación lee `data/objects.json` (copiado al output en build), valida cada registro (§7.2) y separa objetos válidos de inválidos. Solo los válidos participarán del análisis espacial.
 
 ## Estructura del proyecto
 

@@ -16,25 +16,26 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Repo clonado y scaffolding en C:\Users\Usuario\ZapArquitectosChallenge
 - Solución ZapArquitectosChallenge.slnx (.NET 9)
 - Proyectos: SpatialAnalysis.Core + SpatialAnalysis.Console (referencia Core)
-- Estructura de carpetas: Domain, Validation, Geometry, Analysis, Reporting
-- data/objects.json — dataset base (12 registros de la consigna)
-- docs/ — plantillas PROCESS, AI_USAGE, TEST_CASES, folder-tree, sample-output
-- README.md, .gitignore, CompositionRoot (resolución ruta JSON)
-- Verificación: dotnet build OK · dotnet run encuentra data/objects.json
-- Trello: Fase 0 → Hecho (checklist 4/4)
-- Notion: roadmap y arquitectura actualizados
-- Git: b5e9f92 feat: bootstrap solution (Fase 0) → push main
+- data/objects.json — dataset base (12 registros)
+- docs/ — plantillas de entrega
+- Git: b5e9f92 → push main
 
 2026-06-06 — Fase 1: Parsing y DTOs (§7.1)
-- SpatialObjectDto — reflejo 1:1 del JSON (Category nullable)
-- SpatialObjectJsonReader — System.Text.Json, lectura archivo/JSON
-- ObjectListingWriter — listado consola + total leídos
-- Program.cs orquesta lectura y salida; sin validación aún (Fase 2)
-- Verificación: dotnet build 0 errores · 12 objetos listados (incl. K, L, E crudos)
-- Trello: Fase 1 → Hecho
-- Notion: roadmap actualizado
-- Git: d402cb2 feat: add JSON parsing and DTOs (Fase 1) → push main
+- SpatialObjectDto + SpatialObjectJsonReader (System.Text.Json)
+- Git: d402cb2 → push main
+
+2026-06-06 — Fase 2: Validación (§7.2)
+- Value Objects: Point3D, Dimensions, AxisAlignedBox
+- Entidad SpatialObject (solo válidos)
+- Reglas: RequiredFields, InvalidNumeric, PositiveDimensions, Category, DuplicateId (lote)
+- ProcessingBatch + InvalidRecord + SpatialObjectValidator
+- ValidationReportWriter — resumen + errores por registro
+- Resultado dataset base: 12 procesados · 8 válidos · 4 inválidos (D, K, L, E)
+- Supuesto IDs duplicados: invalidar todos los registros que comparten el Id
+- Verificación: dotnet build 0 errores
+- Trello / Notion: actualizados
+- Git: (commit Fase 2) → push main
 
 --------------------------------------------------------------------------------
 
-Próximo: Fase 2 — Validación (§7.2)
+Próximo: Fase 3 — Motor geométrico (§7.3)

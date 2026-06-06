@@ -13,20 +13,36 @@ ZapArquitectosChallenge/
 │   └── sample-output.txt
 └── src/
     ├── SpatialAnalysis.Core/
+    │   ├── CoreAssembly.cs
     │   ├── Input/
     │   │   └── SpatialObjectDto.cs
     │   ├── Parsing/
     │   │   └── SpatialObjectJsonReader.cs
     │   ├── Domain/
     │   │   ├── ValueObjects/
+    │   │   │   ├── Point3D.cs
+    │   │   │   ├── Dimensions.cs
+    │   │   │   └── AxisAlignedBox.cs
     │   │   └── Entities/
+    │   │       └── SpatialObject.cs
     │   ├── Validation/
+    │   │   ├── ValidationErrorCode.cs
+    │   │   ├── ValidationError.cs
+    │   │   ├── ValidationResult.cs
+    │   │   ├── SpatialObjectValidator.cs
     │   │   └── Rules/
+    │   │       ├── IObjectValidationRule.cs
+    │   │       ├── RequiredFieldsRule.cs
+    │   │       ├── InvalidNumericValuesRule.cs
+    │   │       ├── PositiveDimensionsRule.cs
+    │   │       └── CategoryRule.cs
     │   ├── Geometry/
     │   └── Analysis/
     │       └── Models/
+    │           ├── ProcessingBatch.cs
+    │           └── InvalidRecord.cs
     └── SpatialAnalysis.Console/
         ├── Program.cs
         ├── CompositionRoot.cs
         └── Reporting/
-            └── ObjectListingWriter.cs
+            └── ValidationReportWriter.cs

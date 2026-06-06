@@ -1,14 +1,18 @@
 ﻿using SpatialAnalysis.Console;
 using SpatialAnalysis.Console.Reporting;
 using SpatialAnalysis.Core.Parsing;
+using SpatialAnalysis.Core.Validation;
 
 try
 {
     var dataPath = CompositionRoot.ResolveDataFilePath(args);
     var reader = new SpatialObjectJsonReader();
-    var objects = reader.ReadFromFile(dataPath);
+    var dtos = reader.ReadFromFile(dataPath);
 
-    ObjectListingWriter.WriteSummary(Console.Out, dataPath, objects);
+    var validator = new SpatialObjectValidator();
+    var batch = validator.ValidateBatch(dtos);
+
+    ValidationReportWriter.Write(Console.Out, dataPath, batch);
     return 0;
 }
 catch (Exception ex)
