@@ -128,3 +128,17 @@ Registro del uso de herramientas de IA durante el desarrollo de la prueba técni
 | IA como apoyo | Arquitectura y scaffolding por IA; decisiones finales y criterios geométricos revisados manualmente contra el documento y la salida de consola |
 
 La IA aceleró scaffolding, estructura de carpetas y redacción de documentación. La corrección de intervalos cerrados en `Intersects` surgió al diseñar el caso de contacto por cara y verificar la salida real frente al supuesto documentado.
+
+---
+
+## Conclusiones finales
+
+El uso de **Spec-Driven Development (SDD)** —desarrollo guiado por la especificación— redujo de forma notable la tendencia al *vibe coding*: implementar por intuición o por impulso del momento, sin un marco claro que diga qué está dentro y qué fuera del alcance.
+
+Cuando el trabajo avanza en iteraciones sueltas, sin un camino definido desde el inicio y sin consignas explícitas, el costo aparece después: retrabajo, decisiones difíciles de justificar y deuda técnica que no siempre se ve en el primer commit. En este challenge, tener la consigna (§7.1–§7.6) como contrato y un roadmap por fases permitió que cada entrega respondiera a algo concreto, no a una interpretación vaga del problema.
+
+La planificación y la documentación del proceso —en **Notion** (decisiones y arquitectura), **Trello** (estado por fase), **MCPs** (sincronización fuera del IDE) y **Skills de IA** (buenas prácticas y foco en alcance mínimo)— transformaron el desarrollo en un ciclo de **seguimiento y verificación**: avanzar fase a fase, comprobar resultados (`dotnet build`, `dotnet run`, casos documentados) y cerrar con commit, historial y tableros actualizados.
+
+En la práctica, los mensajes del estilo *“siguiente”*, *“sigamos”* o *“avancemos”* dejaron de ser prompts abiertos y pasaron a ser **transiciones entre fases ya acordadas**. La IA aportó velocidad en scaffolding, redacción y correcciones puntuales; las desviaciones se detectaron en auditorías (por ejemplo, antes de la Fase 6 o al alinear Notion con el código) y se resolvieron con cambios acotados —como el ajuste de `Intersects` a intervalos cerrados— en lugar de reescrituras amplias.
+
+En síntesis: **SDD + herramientas de seguimiento + IA con criterio** no reemplazan el criterio del desarrollador, pero sí canalizan su uso hacia un proceso verificable, documentado y alineado con lo que se pidió desde el principio.
