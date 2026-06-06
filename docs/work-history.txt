@@ -92,4 +92,14 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 
 --------------------------------------------------------------------------------
 
+2026-06-06 — Auditoría Notion vs implementación
+- Hub: Fases 6–7 parcial marcadas; progreso 8/9; commit 654a01a
+- Algoritmo AABB: fórmula Intersects `<` → `<=`; aislado J; casos Fase 6
+- Modelo de datos: sin ObjectId/ValidatedObject; InvalidRecord; fases 3–6
+- Estructura proyecto: data/cases, output, CLI, ConsoleReportWriter
+- Entregables: docs y §7.5 marcados OK; Drive/mail pendiente
+- Verificación: dotnet build 0 errores
+
+--------------------------------------------------------------------------------
+
 Próximo: Fase 7 — Entrega (Drive + mail a lbecher@zaparquitectos.com)
