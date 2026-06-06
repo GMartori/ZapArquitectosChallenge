@@ -71,7 +71,7 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - AabbGeometry.Intersects: < → <= (intervalos cerrados, alineado con README)
 - Verificación: dotnet build 0 errores · 3 runs OK (casos + dataset base sin regresión)
 - Trello / Notion: actualizados
-- Git: (pendiente commit) → push main
+- Git: f7cba3d feat: add additional test cases and closed-interval intersects (Fase 6) → push main
 
 --------------------------------------------------------------------------------
 
