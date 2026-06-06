@@ -45,6 +45,14 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Trello / Notion: actualizados
 - Git: fe2c505 feat: add AABB spatial analysis engine (Fase 3) → push main
 
+2026-06-06 — Fase 4: Aislados y resumen (§7.5)
+- FindIsolatedObjects en SpatialAnalyzer (sin intersección ni contención con nadie)
+- Resumen §7.5 consolidado: total, válidos, inválidos, intersecciones, contenidos, aislados
+- Resultado: 1 aislado → J (Id=9). D excluido por inválido (dup Id)
+- Verificación: dotnet build 0 errores
+- Trello / Notion: actualizados
+- Git: (commit Fase 4) → push main
+
 --------------------------------------------------------------------------------
 
-Próximo: Fase 4 — Aislados y resumen (§7.5)
+Próximo: Fase 5 — Reportería y sample-output

@@ -34,10 +34,46 @@ public sealed class SpatialAnalyzer
             }
         }
 
+        var isolatedObjects = FindIsolatedObjects(objects);
+
         return new SpatialAnalysisResult
         {
             Intersections = intersections,
-            Containments = containments
+            Containments = containments,
+            IsolatedObjects = isolatedObjects
         };
+    }
+
+    private static IReadOnlyList<SpatialObject> FindIsolatedObjects(IReadOnlyList<SpatialObject> objects)
+    {
+        var isolated = new List<SpatialObject>();
+
+        foreach (var current in objects)
+        {
+            var hasSpatialRelation = false;
+
+            foreach (var other in objects)
+            {
+                if (current.Id == other.Id)
+                {
+                    continue;
+                }
+
+                if (AabbGeometry.Intersects(current.Box, other.Box)
+                    || AabbGeometry.Contains(current.Box, other.Box)
+                    || AabbGeometry.Contains(other.Box, current.Box))
+                {
+                    hasSpatialRelation = true;
+                    break;
+                }
+            }
+
+            if (!hasSpatialRelation)
+            {
+                isolated.Add(current);
+            }
+        }
+
+        return isolated;
     }
 }

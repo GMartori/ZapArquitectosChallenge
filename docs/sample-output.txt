@@ -1,10 +1,13 @@
 Spatial Analysis — ZAP Arquitectos Challenge
 Archivo: ...\data\objects.json
 
---- Resumen ---
+--- Resumen (§7.5) ---
 Total objetos procesados: 12
 Objetos válidos: 8
 Objetos inválidos: 4
+Intersecciones detectadas: 4
+Objetos contenidos en otros: 2
+Objetos aislados: 1
 
 --- Objetos válidos (participan del análisis espacial) ---
 Id=1 | Name=A | Category=Box | Origin=(0,0,0) | Size=(10x10x10)
@@ -28,10 +31,7 @@ Id=9 | Name=J | Category=Box | Origin=(60,60,0) | Size=(8x8x8)
   - [MissingCategory] (Category): La categoría no puede estar vacía.
   - [DuplicateId] (Id): El Id 4 está duplicado en el lote.
 
---- Análisis espacial (§7.3) ---
-Intersecciones detectadas: 4
-Contenciones detectadas: 2
-
+--- Detalle análisis espacial (§7.3) ---
 Pares en intersección:
 A (Id=1) ∩ B (Id=2)
 A (Id=1) ∩ C (Id=3)
@@ -41,3 +41,6 @@ H (Id=7) ∩ I (Id=8)
 Pares en contención (inner ⊂ outer):
 B (Id=2) ⊂ A (Id=1)
 G (Id=6) ⊂ F (Id=5)
+
+Objetos aislados:
+J (Id=9)

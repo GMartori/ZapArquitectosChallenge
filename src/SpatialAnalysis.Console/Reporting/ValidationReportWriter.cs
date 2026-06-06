@@ -14,10 +14,7 @@ internal static class ValidationReportWriter
         output.WriteLine("Spatial Analysis — ZAP Arquitectos Challenge");
         output.WriteLine($"Archivo: {dataPath}");
         output.WriteLine();
-        output.WriteLine("--- Resumen ---");
-        output.WriteLine($"Total objetos procesados: {batch.TotalRead}");
-        output.WriteLine($"Objetos válidos: {batch.ValidCount}");
-        output.WriteLine($"Objetos inválidos: {batch.InvalidCount}");
+        WriteSummary(output, batch, spatialResult);
         output.WriteLine();
 
         output.WriteLine("--- Objetos válidos (participan del análisis espacial) ---");
@@ -62,14 +59,28 @@ internal static class ValidationReportWriter
         }
     }
 
+    private static void WriteSummary(
+        TextWriter output,
+        ProcessingBatch batch,
+        SpatialAnalysisResult? spatialResult)
+    {
+        output.WriteLine("--- Resumen (§7.5) ---");
+        output.WriteLine($"Total objetos procesados: {batch.TotalRead}");
+        output.WriteLine($"Objetos válidos: {batch.ValidCount}");
+        output.WriteLine($"Objetos inválidos: {batch.InvalidCount}");
+
+        if (spatialResult is not null)
+        {
+            output.WriteLine($"Intersecciones detectadas: {spatialResult.IntersectionCount}");
+            output.WriteLine($"Objetos contenidos en otros: {spatialResult.ContainedObjectCount}");
+            output.WriteLine($"Objetos aislados: {spatialResult.IsolatedCount}");
+        }
+    }
+
     private static void WriteSpatialAnalysis(TextWriter output, SpatialAnalysisResult spatialResult)
     {
         output.WriteLine();
-        output.WriteLine("--- Análisis espacial (§7.3) ---");
-        output.WriteLine($"Intersecciones detectadas: {spatialResult.IntersectionCount}");
-        output.WriteLine($"Contenciones detectadas: {spatialResult.ContainmentCount}");
-        output.WriteLine();
-
+        output.WriteLine("--- Detalle análisis espacial (§7.3) ---");
         output.WriteLine("Pares en intersección:");
         if (spatialResult.Intersections.Count == 0)
         {
@@ -94,6 +105,20 @@ internal static class ValidationReportWriter
             foreach (var pair in spatialResult.Containments)
             {
                 output.WriteLine($"{FormatObject(pair.Inner)} ⊂ {FormatObject(pair.Outer)}");
+            }
+        }
+
+        output.WriteLine();
+        output.WriteLine("Objetos aislados:");
+        if (spatialResult.IsolatedObjects.Count == 0)
+        {
+            output.WriteLine("(ninguno)");
+        }
+        else
+        {
+            foreach (var obj in spatialResult.IsolatedObjects)
+            {
+                output.WriteLine(FormatObject(obj));
             }
         }
     }
