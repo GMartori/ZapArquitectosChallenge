@@ -9,9 +9,9 @@ public static class AabbGeometry
 {
     public static bool Intersects(AxisAlignedBox a, AxisAlignedBox b)
     {
-        var overlapX = a.MinX < b.MaxX && b.MinX < a.MaxX;
-        var overlapY = a.MinY < b.MaxY && b.MinY < a.MaxY;
-        var overlapZ = a.MinZ < b.MaxZ && b.MinZ < a.MaxZ;
+        var overlapX = a.MinX <= b.MaxX && b.MinX <= a.MaxX;
+        var overlapY = a.MinY <= b.MaxY && b.MinY <= a.MaxY;
+        var overlapZ = a.MinZ <= b.MaxZ && b.MinZ <= a.MaxZ;
 
         return overlapX && overlapY && overlapZ;
     }

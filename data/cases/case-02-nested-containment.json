@@ -1,0 +1,35 @@
+[
+  {
+    "Id": 201,
+    "Name": "Outer",
+    "Category": "Container",
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "Width": 20,
+    "Height": 20,
+    "Depth": 20
+  },
+  {
+    "Id": 202,
+    "Name": "Middle",
+    "Category": "Container",
+    "X": 5,
+    "Y": 5,
+    "Z": 5,
+    "Width": 10,
+    "Height": 10,
+    "Depth": 10
+  },
+  {
+    "Id": 203,
+    "Name": "Inner",
+    "Category": "Box",
+    "X": 8,
+    "Y": 8,
+    "Z": 8,
+    "Width": 4,
+    "Height": 4,
+    "Depth": 4
+  }
+]

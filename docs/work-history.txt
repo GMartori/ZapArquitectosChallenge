@@ -64,4 +64,15 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 
 --------------------------------------------------------------------------------
 
-Próximo: Fase 6 — Casos adicionales (§7.6)
+2026-06-06 — Fase 6: Casos adicionales (§7.6)
+- data/cases/case-01-face-contact.json — contacto por cara (Left∩Right)
+- data/cases/case-02-nested-containment.json — Outer⊃Middle⊃Inner
+- docs/TEST_CASES.md — intención, esperado, obtenido por caso
+- AabbGeometry.Intersects: < → <= (intervalos cerrados, alineado con README)
+- Verificación: dotnet build 0 errores · 3 runs OK (casos + dataset base sin regresión)
+- Trello / Notion: actualizados
+- Git: (pendiente commit) → push main
+
+--------------------------------------------------------------------------------
+
+Próximo: Fase 7 — Documentación y entrega (PROCESS, AI_USAGE, Drive, mail)

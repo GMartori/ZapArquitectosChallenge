@@ -1,0 +1,24 @@
+[
+  {
+    "Id": 101,
+    "Name": "Left",
+    "Category": "Box",
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "Width": 5,
+    "Height": 5,
+    "Depth": 5
+  },
+  {
+    "Id": 102,
+    "Name": "Right",
+    "Category": "Box",
+    "X": 5,
+    "Y": 0,
+    "Z": 0,
+    "Width": 5,
+    "Height": 5,
+    "Depth": 5
+  }
+]

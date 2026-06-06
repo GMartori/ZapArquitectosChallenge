@@ -15,8 +15,9 @@ dotnet run --project src/SpatialAnalysis.Console
 Opciones de línea de comandos:
 
 ```bash
-# JSON personalizado
+# JSON personalizado (dataset base o casos adicionales)
 dotnet run --project src/SpatialAnalysis.Console -- data/objects.json
+dotnet run --project src/SpatialAnalysis.Console -- data/cases/case-01-face-contact.json --no-export
 
 # Exportar reporte a ruta específica
 dotnet run --project src/SpatialAnalysis.Console -- --output output/results.txt
