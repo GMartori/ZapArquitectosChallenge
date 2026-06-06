@@ -60,7 +60,7 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - docs/sample-output.txt actualizado
 - Verificación: dotnet build 0 errores · export OK
 - Trello / Notion: actualizados
-- Git: (commit Fase 5) → push main
+- Git: 977ab64 feat: add console report export and CLI options (Fase 5) → push main
 
 --------------------------------------------------------------------------------
 
