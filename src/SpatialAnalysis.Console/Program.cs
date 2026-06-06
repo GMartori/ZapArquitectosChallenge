@@ -16,7 +16,11 @@ try
     var analyzer = new SpatialAnalyzer();
     var spatialResult = analyzer.Analyze(batch.ValidObjects);
 
-    ValidationReportWriter.Write(Console.Out, dataPath, batch, spatialResult);
+    var exportPath = CompositionRoot.ShouldExport(args)
+        ? CompositionRoot.ResolveExportFilePath(args)
+        : null;
+
+    ConsoleReportWriter.Publish(dataPath, batch, spatialResult, exportPath);
     return 0;
 }
 catch (Exception ex)

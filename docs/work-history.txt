@@ -53,6 +53,15 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Trello / Notion: actualizados
 - Git: e044430 feat: add isolated objects and section 7.5 summary (Fase 4) → push main
 
+2026-06-06 — Fase 5: Reportería (§7.4)
+- ValidationReportWriter → ConsoleReportWriter (reporte unificado)
+- Export automático a output/results.txt (--output / --no-export)
+- Timestamp en reporte · README con opciones CLI
+- docs/sample-output.txt actualizado
+- Verificación: dotnet build 0 errores · export OK
+- Trello / Notion: actualizados
+- Git: (commit Fase 5) → push main
+
 --------------------------------------------------------------------------------
 
-Próximo: Fase 5 — Reportería y sample-output
+Próximo: Fase 6 — Casos adicionales (§7.6)

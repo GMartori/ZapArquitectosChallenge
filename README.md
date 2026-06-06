@@ -12,13 +12,23 @@ Herramienta en C# para procesar prismas rectangulares 3D (AABB): lectura JSON, v
 dotnet run --project src/SpatialAnalysis.Console
 ```
 
-Opcional: indicar ruta al JSON:
+Opciones de línea de comandos:
 
 ```bash
+# JSON personalizado
 dotnet run --project src/SpatialAnalysis.Console -- data/objects.json
+
+# Exportar reporte a ruta específica
+dotnet run --project src/SpatialAnalysis.Console -- --output output/results.txt
+
+# Solo consola (sin archivo)
+dotnet run --project src/SpatialAnalysis.Console -- --no-export
 ```
 
-La aplicación lee `data/objects.json` (copiado al output en build), valida cada registro (§7.2) y separa objetos válidos de inválidos. Solo los válidos participarán del análisis espacial.
+Por defecto la aplicación:
+1. Lee `data/objects.json` (copiado al output en build)
+2. Valida cada registro (§7.2) y analiza espacialmente los válidos (§7.3)
+3. Muestra el reporte en consola y lo exporta a `output/results.txt`
 
 ## Estructura del proyecto
 

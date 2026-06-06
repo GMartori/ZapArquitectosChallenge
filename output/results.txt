@@ -1,5 +1,5 @@
 ﻿Spatial Analysis — ZAP Arquitectos Challenge
-Archivo: ...\data\objects.json
+Archivo: C:\Users\Usuario\ZapArquitectosChallenge\src\SpatialAnalysis.Console\bin\Debug\net9.0\data\objects.json
 Generado: 2026-06-06 10:13:58
 
 --- Resumen (§7.5) ---

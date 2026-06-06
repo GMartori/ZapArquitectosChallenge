@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <None Include="..\..\data\**\*" LinkBase="data" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\output\**\*" LinkBase="output" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
