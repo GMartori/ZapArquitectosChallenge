@@ -33,7 +33,7 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Verificación: dotnet build 0 errores · 12 objetos listados (incl. K, L, E crudos)
 - Trello: Fase 1 → Hecho
 - Notion: roadmap actualizado
-- Git: commit Fase 1 → push main
+- Git: d402cb2 feat: add JSON parsing and DTOs (Fase 1) → push main
 
 --------------------------------------------------------------------------------
 
