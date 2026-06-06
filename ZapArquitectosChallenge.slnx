@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SpatialAnalysis.Console/SpatialAnalysis.Console.csproj" />
+    <Project Path="src/SpatialAnalysis.Core/SpatialAnalysis.Core.csproj" />
+  </Folder>
+</Solution>

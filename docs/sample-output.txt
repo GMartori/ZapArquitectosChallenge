@@ -1,0 +1,4 @@
+Spatial Analysis — ZAP Arquitectos Challenge
+Bootstrap OK. Fase 0 completada.
+
+(Se actualizará con la salida real del análisis en Fase 5.)

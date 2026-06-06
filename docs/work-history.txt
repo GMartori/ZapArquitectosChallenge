@@ -1,0 +1,30 @@
+Work History — Zap Arquitectos Challenge
+========================================
+
+Convención: al cerrar cada fase → actualizar este archivo → git commit → push a main.
+Repo: https://github.com/GMartori/ZapArquitectosChallenge
+
+--------------------------------------------------------------------------------
+
+2026-06-06 — Sesión 1: Análisis y diseño de arquitectura
+- Documento de consigna analizado (prismas 3D / AABB)
+- Decisiones: Core + Console, validación separada, O(n²), KISS
+- Documentado en Notion y tareas en Trello
+- Sin código en repo aún
+
+2026-06-06 — Fase 0: Bootstrap
+- Repo clonado y scaffolding en C:\Users\Usuario\ZapArquitectosChallenge
+- Solución ZapArquitectosChallenge.slnx (.NET 9)
+- Proyectos: SpatialAnalysis.Core + SpatialAnalysis.Console (referencia Core)
+- Estructura de carpetas: Domain, Validation, Geometry, Analysis, Reporting
+- data/objects.json — dataset base (12 registros de la consigna)
+- docs/ — plantillas PROCESS, AI_USAGE, TEST_CASES, folder-tree, sample-output
+- README.md, .gitignore, CompositionRoot (resolución ruta JSON)
+- Verificación: dotnet build OK · dotnet run encuentra data/objects.json
+- Trello: Fase 0 → Hecho (checklist 4/4)
+- Notion: roadmap y arquitectura actualizados
+- Git: commit inicial Fase 0 → push main
+
+--------------------------------------------------------------------------------
+
+Próximo: Fase 1 — Parsing y DTOs

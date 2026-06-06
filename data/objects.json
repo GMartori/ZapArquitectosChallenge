@@ -1,0 +1,134 @@
+[
+  {
+    "Id": 1,
+    "Name": "A",
+    "Category": "Box",
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "Width": 10,
+    "Height": 10,
+    "Depth": 10
+  },
+  {
+    "Id": 2,
+    "Name": "B",
+    "Category": "Box",
+    "X": 2,
+    "Y": 2,
+    "Z": 2,
+    "Width": 4,
+    "Height": 4,
+    "Depth": 4
+  },
+  {
+    "Id": 3,
+    "Name": "C",
+    "Category": "Box",
+    "X": 8,
+    "Y": 8,
+    "Z": 8,
+    "Width": 6,
+    "Height": 6,
+    "Depth": 6
+  },
+  {
+    "Id": 4,
+    "Name": "D",
+    "Category": "Box",
+    "X": 30,
+    "Y": 30,
+    "Z": 30,
+    "Width": 5,
+    "Height": 5,
+    "Depth": 5
+  },
+  {
+    "Id": 5,
+    "Name": "F",
+    "Category": "Container",
+    "X": 15,
+    "Y": 0,
+    "Z": 0,
+    "Width": 12,
+    "Height": 12,
+    "Depth": 12
+  },
+  {
+    "Id": 6,
+    "Name": "G",
+    "Category": "Container",
+    "X": 18,
+    "Y": 2,
+    "Z": 2,
+    "Width": 3,
+    "Height": 3,
+    "Depth": 3
+  },
+  {
+    "Id": 7,
+    "Name": "H",
+    "Category": "Box",
+    "X": 40,
+    "Y": 0,
+    "Z": 0,
+    "Width": 7,
+    "Height": 7,
+    "Depth": 7
+  },
+  {
+    "Id": 8,
+    "Name": "I",
+    "Category": "Box",
+    "X": 44,
+    "Y": 4,
+    "Z": 4,
+    "Width": 5,
+    "Height": 5,
+    "Depth": 5
+  },
+  {
+    "Id": 9,
+    "Name": "J",
+    "Category": "Box",
+    "X": 60,
+    "Y": 60,
+    "Z": 0,
+    "Width": 8,
+    "Height": 8,
+    "Depth": 8
+  },
+  {
+    "Id": 10,
+    "Name": "K",
+    "Category": "Void",
+    "X": 70,
+    "Y": 10,
+    "Z": 10,
+    "Width": 0,
+    "Height": 4,
+    "Depth": 4
+  },
+  {
+    "Id": 11,
+    "Name": "L",
+    "Category": null,
+    "X": 5,
+    "Y": 20,
+    "Z": 5,
+    "Width": 3,
+    "Height": 3,
+    "Depth": 3
+  },
+  {
+    "Id": 4,
+    "Name": "E",
+    "Category": "",
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "Width": -2,
+    "Height": 3,
+    "Depth": 3
+  }
+]

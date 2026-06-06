@@ -1,0 +1,51 @@
+# Zap Arquitectos Challenge — Spatial Analysis
+
+Herramienta en C# para procesar prismas rectangulares 3D (AABB): lectura JSON, validación y análisis espacial (intersección, contención, aislamiento).
+
+## Requisitos
+
+- [.NET 9 SDK](https://dotnet.microsoft.com/download) o superior
+
+## Ejecución
+
+```bash
+dotnet run --project src/SpatialAnalysis.Console
+```
+
+Opcional: indicar ruta al JSON (Fase 1+):
+
+```bash
+dotnet run --project src/SpatialAnalysis.Console -- data/objects.json
+```
+
+## Estructura del proyecto
+
+```
+ZapArquitectosChallenge/
+├── src/
+│   ├── SpatialAnalysis.Core/     # Dominio, validación, geometría, análisis
+│   └── SpatialAnalysis.Console/  # Entry point y reportería
+├── data/
+│   └── objects.json              # Dataset base de la consigna
+└── docs/                         # Documentación de entrega
+```
+
+## Supuestos
+
+- `(X, Y, Z)` = esquina mínima del prisma; sin rotación (ejes alineados).
+- Dimensiones deben ser > 0 para considerar el objeto válido.
+- IDs duplicados: se invalidan todos los registros que comparten el ID.
+- Intersección en borde: cuenta (intervalos cerrados AABB).
+
+## Documentación adicional
+
+Ver carpeta `docs/`:
+
+- `PROCESS.md` — proceso y decisiones de diseño
+- `AI_USAGE.md` — uso de herramientas de IA
+- `TEST_CASES.md` — casos adicionales
+- `folder-tree.txt`, `work-history.txt`, `sample-output.txt`
+
+## Repositorio
+
+https://github.com/GMartori/ZapArquitectosChallenge
