@@ -88,7 +88,7 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 2026-06-06 — Fase 7 (ampliación PROCESS): metodología y herramientas
 - PROCESS.md: sección SDD, MCPs (Notion, Trello, GitHub, Google Workspace, Tavily) y Skills
 - Verificación: dotnet build 0 errores
-- Git: (pendiente commit) → push main
+- Git: 09ad4ab docs: add SDD, MCPs and skills section to PROCESS.md → push main
 
 --------------------------------------------------------------------------------
 
