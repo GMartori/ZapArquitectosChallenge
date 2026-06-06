@@ -51,7 +51,7 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Resultado: 1 aislado → J (Id=9). D excluido por inválido (dup Id)
 - Verificación: dotnet build 0 errores
 - Trello / Notion: actualizados
-- Git: (commit Fase 4) → push main
+- Git: e044430 feat: add isolated objects and section 7.5 summary (Fase 4) → push main
 
 --------------------------------------------------------------------------------
 
