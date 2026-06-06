@@ -81,7 +81,7 @@ Repo: https://github.com/GMartori/ZapArquitectosChallenge
 - Drive y mail: pendientes (fuera de alcance esta sesión)
 - Verificación: dotnet build 0 errores
 - Trello / Notion: actualizados (Fase 7 en progreso)
-- Git: (pendiente commit) → push main
+- Git: 9efd792 docs: complete PROCESS.md and AI_USAGE.md (Fase 7 partial) → push main
 
 --------------------------------------------------------------------------------
 
